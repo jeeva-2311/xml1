@@ -1,0 +1,911 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://www.mci.com/ServiceOrder">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:ProcessServiceOrderRequest>
+         <_9:ProcessServiceOrder xmlns:_9="http://www.mci.com/oagis/9"
+                        xmlns:_9_1="http://www.openapplications.org/oagis/9"
+                        xmlns:order="http://www.mci.com/ServiceOrder"
+                        releaseID="8.1.2">
+    <_9_1:ApplicationArea>
+        <_9_1:Sender>
+            <_9_1:LogicalID>ezOM</_9_1:LogicalID>
+            <_9_1:ComponentID>ezOM</_9_1:ComponentID>
+            <_9_1:TaskID>WorkOrderSubmit</_9_1:TaskID>
+            <_9_1:ReferenceID>SOAEYE_2851265</_9_1:ReferenceID>
+        </_9_1:Sender>
+        <_9_1:CreationDateTime>2022-05-20T06:47:32Z</_9_1:CreationDateTime>
+        <_9_1:BODID>414d5120534f413253202020202020206242b8732fc9413b</_9_1:BODID>
+    </_9_1:ApplicationArea>
+    <_9:DataArea>
+        <_9_1:Process/>
+        <_9:ServiceOrder>
+            <_9:ServiceOrderHeader>
+                <_9_1:DocumentID>
+                    <_9_1:ID schemeID="Transport" schemeName="WorkOrderNumber">99410883</_9_1:ID>
+                    <_9_1:RevisionID>0</_9_1:RevisionID>
+                </_9_1:DocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeID="ESPManaged"
+                             schemeName="RelatedWorkOrderNumber">99410782</_9_1:ID>
+                    <_9_1:RevisionID>0</_9_1:RevisionID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="XONtwkMigrationCompleteInd">TRUE</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="UNOServiceOrder">99410883</_9_1:ID>
+                    <_9_1:RevisionID>0</_9_1:RevisionID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="ESPServiceOrder">2950299.121</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="OrderLevelEcsAuditNumber">OCW99410883.0</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="EODBID">15287199</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="DataTransactionSequenceNumber">218040000007944770</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="OrderRequestID">99410737</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="OpportunityID">O2-0558411</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="DUALPARALLEL_FLAG">False</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="HOTCUT_FLAG">No</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="PriceBookID">BOOK-RTB-1614356324284-2021-02-26</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="QuoteID">57255011</_9_1:ID>
+                    <_9_1:RevisionID>0</_9_1:RevisionID>
+                </_9_1:AlternateDocumentID>
+                <_9_1:AlternateDocumentID>
+                    <_9_1:ID schemeName="ClusterAffinity">Normal</_9_1:ID>
+                </_9_1:AlternateDocumentID>
+                <_9:ActionCode listName="INSTALL">INSTALL</_9:ActionCode>
+                <_9:ProviderParty category="ParentVLE">
+                    <_9_1:PartyIDs>
+                        <_9_1:ID schemeName="OpCo">1151</_9_1:ID>
+                    </_9_1:PartyIDs>
+                    <_9_1:Name>MCI Communications Services LLC d/b/a Verizon
+                               Business Services</_9_1:Name>
+                    <_9_1:Contact type="OrderManager">
+                        <_9_1:ID schemeName="OneWorldNumber">813006048</_9_1:ID>
+                        <_9_1:ID schemeName="EnterpriseID">4324808971</_9_1:ID>
+                        <_9_1:ID schemeName="VzId">PARUTPU</_9_1:ID>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                            <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                            <_9_1:AreaDialing>875</_9_1:AreaDialing>
+                            <_9_1:DialNumber>9049786</_9_1:DialNumber>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                            <_9_1:URI>purnima.paruthi@one.verizon.com</_9_1:URI>
+                        </_9_1:Communication>
+                        <_9_1:FirstName>Purnima</_9_1:FirstName>
+                        <_9_1:LastName>Paruthi</_9_1:LastName>
+                    </_9_1:Contact>
+                    <_9_1:Contact type="AssignedOrderManager">
+                        <_9_1:ID schemeName="OneWorldNumber">813006048</_9_1:ID>
+                        <_9_1:ID schemeName="EnterpriseID">4324808971</_9_1:ID>
+                        <_9_1:ID schemeName="VzId">PARUTPU</_9_1:ID>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                            <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                            <_9_1:AreaDialing>875</_9_1:AreaDialing>
+                            <_9_1:DialNumber>9049786</_9_1:DialNumber>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                            <_9_1:URI>purnima.paruthi@one.verizon.com</_9_1:URI>
+                        </_9_1:Communication>
+                        <_9_1:FirstName>Purnima</_9_1:FirstName>
+                        <_9_1:LastName>Paruthi</_9_1:LastName>
+                    </_9_1:Contact>
+                    <_9_1:Contact type="SalesManager">
+                        <_9_1:ID schemeName="OneWorldNumber">639008003</_9_1:ID>
+                        <_9_1:ID schemeName="EnterpriseID">3658677443</_9_1:ID>
+                        <_9_1:ID schemeName="VzId">nandyso</_9_1:ID>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                            <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                            <_9_1:URI>sourav.nandy@one.verizon.com</_9_1:URI>
+                        </_9_1:Communication>
+                        <_9_1:FirstName>Sourav</_9_1:FirstName>
+                        <_9_1:LastName>Nandy</_9_1:LastName>
+                    </_9_1:Contact>
+                </_9:ProviderParty>
+                <_9:CustomerParty category="ParentCLE">
+                    <_9_1:PartyIDs>
+                        <_9_1:ID schemeName="OrderingChannel">OFFLINE</_9_1:ID>
+                        <_9_1:ID schemeName="DunsNumber"/>
+                        <_9_1:ID schemeName="NASPID">89RTER</_9_1:ID>
+                        <_9_1:ID schemeName="GCH">9342151</_9_1:ID>
+                        <_9_1:ID schemeName="ContractCLE">9967778</_9_1:ID>
+                        <_9_1:ID schemeName="RevLoc"/>
+                        <_9_1:ID schemeName="MarketSegment">SLED</_9_1:ID>
+                        <_9_1:ID schemeName="CustomerSegment">SLED</_9_1:ID>
+                        <_9_1:ID schemeName="NASPHQRegion">Chatter #HELP</_9_1:ID>
+                    </_9_1:PartyIDs>
+                    <_9_1:Name>E2E-USA-13911-C4</_9_1:Name>
+                    <_9:Location>
+                        <_9_1:ID schemeName="InstanceID">78731201729</_9_1:ID>
+                    </_9:Location>
+                    <_9:Contact type="Primary">
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                            <_9_1:Address>
+                                <_9_1:ID schemeName="AddressID">aadbea6ed7a646b3a11c49df7e93cae2</_9_1:ID>
+                                <_9_1:AddressLine sequence="1">2424 Garden of
+                                                               the Gods Rd</_9_1:AddressLine>
+                                <_9_1:CityName>Colorado Springs</_9_1:CityName>
+                                <_9_1:CountrySubDivisionCode>CO</_9_1:CountrySubDivisionCode>
+                                <_9_1:CountryCode listID="USA"
+                                                  name="United States">US</_9_1:CountryCode>
+                                <_9_1:PostalCode>80919-3133</_9_1:PostalCode>
+                            </_9_1:Address>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                            <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                            <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                            <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                            <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                        </_9_1:Communication>
+                        <_9_1:FirstName>purnima</_9_1:FirstName>
+                        <_9_1:LastName>paruthi</_9_1:LastName>
+                    </_9:Contact>
+                    <_9:Contact type="Technical">
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                            <_9_1:Address>
+                                <_9_1:ID schemeName="AddressID">aadbea6ed7a646b3a11c49df7e93cae2</_9_1:ID>
+                                <_9_1:AddressLine sequence="1">2424 Garden of
+                                                               the Gods Rd</_9_1:AddressLine>
+                                <_9_1:CityName>Colorado Springs</_9_1:CityName>
+                                <_9_1:CountrySubDivisionCode>CO</_9_1:CountrySubDivisionCode>
+                                <_9_1:CountryCode listID="USA"
+                                                  name="United States">US</_9_1:CountryCode>
+                                <_9_1:PostalCode>80919-3133</_9_1:PostalCode>
+                            </_9_1:Address>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                            <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                            <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                            <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                            <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                        </_9_1:Communication>
+                        <_9_1:FirstName>purnima</_9_1:FirstName>
+                        <_9_1:LastName>paruthi</_9_1:LastName>
+                    </_9:Contact>
+                </_9:CustomerParty>
+                <_9:BillToParty>
+                    <_9_1:PartyIDs>
+                        <_9_1:ID schemeName="BAN">SV015158</_9_1:ID>
+                    </_9_1:PartyIDs>
+                    <_9:Location type="Billing">
+                        <_9_1:ID schemeName="InstanceID">101519451916</_9_1:ID>
+                    </_9:Location>
+                    <_9_1:Code listAgencyID="1151" listAgencyName="0.0"
+                               listID="VLE-MRC-NRC-USG-CLE-CUR" listName="0.0"
+                               listVersionID="0.0" name="9342151">USD</_9_1:Code>
+                </_9:BillToParty>
+                <_9:MileStone>
+                    <_9_1:ID>AgencyOrderSentDate</_9_1:ID>
+                    <_9:Date>2022-05-20</_9:Date>
+                </_9:MileStone>
+                <_9:MileStone>
+                    <_9_1:ID>OrderCreation</_9_1:ID>
+                    <_9_1:Status>
+                        <_9_1:EffectiveDateTime>2022-05-20T06:44:35Z</_9_1:EffectiveDateTime>
+                    </_9_1:Status>
+                </_9:MileStone>
+                <_9:MileStone>
+                    <_9_1:ID>QuoteDate</_9_1:ID>
+                    <_9:Date>2022-05-20</_9:Date>
+                </_9:MileStone>
+                <_9:MileStone>
+                    <_9_1:ID>CustDesiredDueDate</_9_1:ID>
+                    <_9:Date>2022-06-16</_9:Date>
+                </_9:MileStone>
+                <_9:Contract>
+                    <_9_1:ID schemeAgencyName="Master" schemeName="Calnet">447090</_9_1:ID>
+                    <_9_1:Type>USSA</_9_1:Type>
+                    <_9:Date type="ContractStartDate">2022-05-20</_9:Date>
+                    <_9:Term>12</_9:Term>
+                    <_9:Category name="contractSubType">CALNG</_9:Category>
+                    <_9:Category name="customerContractID">E4-E2E-2021-SS02-03</_9:Category>
+                    <_9:Code name="AccessFlag">N</_9:Code>
+                    <_9:Code name="AmendmentID">N18040-01</_9:Code>
+                    <_9:Code name="IndicatorType">VRD</_9:Code>
+                </_9:Contract>
+                <_9:SystemID schemeName="ORDERENTRY">UNO</_9:SystemID>
+                <_9_1:Code name="Export">Y</_9_1:Code>
+                <_9_1:Code name="Credit">N</_9_1:Code>
+                <_9_1:Code name="ExternalCredit">Honored</_9_1:Code>
+                <_9_1:Code name="OppurtunityType">Contract Only</_9_1:Code>
+                <_9:ExportCompliance>
+                    <_9:ApprovalIndicator type="ICFlag">false</_9:ApprovalIndicator>
+                    <_9:ApprovalIndicator type="Install">false</_9:ApprovalIndicator>
+                    <_9:CountryCodes>
+                        <_9:CountryCode listID="USA" name="United States"
+                                        type="SoldCountryCode">US</_9:CountryCode>
+                    </_9:CountryCodes>
+                    <_9:LegalEntity>MCI Communications Services LLC d/b/a
+                                    Verizon Business Services</_9:LegalEntity>
+                </_9:ExportCompliance>
+                <_9:FileAttachment type="application/pdf">
+                    <_9_1:ID schemeName="AttachmentId">102184881532</_9_1:ID>
+                    <_9_1:Name>PriceQuote-QUO-External-57255011-Rev0.pdf</_9_1:Name>
+                    <_9_1:Attachment>
+                        <_9_1:URI>/ordering/t/docAttachment?id=102014885066</_9_1:URI>
+                        <_9_1:Description>External Firm Quote PDF</_9_1:Description>
+                    </_9_1:Attachment>
+                </_9:FileAttachment>
+                <_9:FileAttachment type="application/pdf">
+                    <_9_1:ID schemeName="AttachmentId">102184881535</_9_1:ID>
+                    <_9_1:Name>PriceQuote-QUO-External-57255011-Rev0_Approved.pdf</_9_1:Name>
+                    <_9_1:Attachment>
+                        <_9_1:URI>/ordering/t/docAttachment?id=102150181755</_9_1:URI>
+                        <_9_1:Description>External Firm Quote PDF</_9_1:Description>
+                    </_9_1:Attachment>
+                </_9:FileAttachment>
+                <_9:FileAttachment type="application/pdf">
+                    <_9_1:ID schemeName="AttachmentId">102184881537</_9_1:ID>
+                    <_9_1:Name>PriceQuote-CPE-QUO-External-57255011-Rev0_Approved.pdf</_9_1:Name>
+                    <_9_1:Attachment>
+                        <_9_1:URI>/ordering/t/docAttachment?id=102150181758</_9_1:URI>
+                        <_9_1:Description>External Firm CPE Quote PDF</_9_1:Description>
+                    </_9_1:Attachment>
+                </_9:FileAttachment>
+                <_9:FileAttachment type="application/zip">
+                    <_9_1:ID schemeName="AttachmentId">102184881539</_9_1:ID>
+                    <_9_1:Name>Merged-QUO-External-57255011-Rev0.zip</_9_1:Name>
+                    <_9_1:Attachment>
+                        <_9_1:URI>/ordering/t/docAttachment?id=102150061923</_9_1:URI>
+                        <_9_1:Description>Merged Firm Quote PDF</_9_1:Description>
+                    </_9_1:Attachment>
+                </_9:FileAttachment>
+                <_9:Indicator type="FurtherReviewRequired">false</_9:Indicator>
+                <_9:Indicator type="TSP">false</_9:Indicator>
+                <_9:Indicator type="PIPEMultiPvcMvrfPortInd">false</_9:Indicator>
+            </_9:ServiceOrderHeader>
+            <_9:ServiceOrderLine>
+                <_9:Product>
+                    <_9_1:ID schemeName="InstanceID">283109691</_9_1:ID>
+                    <_9:Code name="Standalone VoIP Services">SL_VOIP</_9:Code>
+                    <_9:Name>Standalone VoIP Services</_9:Name>
+                    <_9:ActionCode>ADD</_9:ActionCode>
+                    <_9:Services>
+                        <_9:DataService type="PR_PIP_GAT">
+                            <_9_1:ID schemeName="InstanceID">283109689</_9_1:ID>
+                            <_9:CategoryCode>PR_PIP_GAT</_9:CategoryCode>
+                            <_9:ProductOfferingID>283109689</_9:ProductOfferingID>
+                            <_9_1:Name>Private IP Gateways</_9_1:Name>
+                            <_9:ActionCode>ADD</_9:ActionCode>
+                            <_9:NodeID>0</_9:NodeID>
+                            <_9:Contract>
+                                <_9_1:ID>447090</_9_1:ID>
+                                <_9:Term>0</_9:Term>
+                            </_9:Contract>
+                            <_9:BillToParty>
+                                <_9_1:PartyIDs>
+                                    <_9_1:ID schemeName="BAN">SV015158</_9_1:ID>
+                                </_9_1:PartyIDs>
+                                <_9_1:Location type="Billing">
+                                    <_9_1:ID schemeName="InstanceID">101519451916</_9_1:ID>
+                                </_9_1:Location>
+                            </_9:BillToParty>
+                            <_9:CustomerParty category="CLE">
+                                <_9_1:PartyIDs>
+                                    <_9_1:ID schemeName="RFCTaxID"/>
+                                    <_9_1:ID schemeName="SOF">930192</_9_1:ID>
+                                    <_9_1:ID schemeName="RFCTaxID">10-1234567</_9_1:ID>
+                                    <_9_1:ID schemeName="BusinessRegistrationID">NA</_9_1:ID>
+                                    <_9_1:ID schemeName="DunsNumber">996503630</_9_1:ID>
+                                    <_9_1:ID schemeName="GCH">9342151</_9_1:ID>
+                                </_9_1:PartyIDs>
+                                <_9_1:Name>E2E-USA-13911-C4</_9_1:Name>
+                                <_9:Location>
+                                    <_9_1:ID schemeName="InstanceID">78731201729</_9_1:ID>
+                                </_9:Location>
+                                <_9_1:CurrencyCode>USD</_9_1:CurrencyCode>
+                                <_9_1:Status/>
+                            </_9:CustomerParty>
+                            <_9:MileStone>
+                                <_9_1:ID>CustDesiredDueDate</_9_1:ID>
+                                <_9:Date>2022-06-16</_9:Date>
+                                <_9:DueDateType>BPDD</_9:DueDateType>
+                            </_9:MileStone>
+                            <_9:MileStone>
+                                <_9_1:ID>CatalogReferenceTime</_9_1:ID>
+                                <_9_1:Status>
+                                    <_9_1:EffectiveDateTime>2022-05-12T09:10:55Z</_9_1:EffectiveDateTime>
+                                </_9_1:Status>
+                            </_9:MileStone>
+                            <_9:Location type="Service">
+                                <_9_1:ID schemeName="InstanceID">21523167C</_9_1:ID>
+                            </_9:Location>
+                            <_9:ServiceCapability>
+                                <_9_1:ID schemeName="InstanceID">283110503</_9_1:ID>
+                                <_9_1:Code name="FeatureCode">FET_PIP_GW_SCI_CUST_CONN</_9_1:Code>
+                                <_9_1:Name>SCI - Customer Connection</_9_1:Name>
+                                <_9:ActionCode>ADD</_9:ActionCode>
+                                <_9:Spec>
+                                    <_9:Code name="SCI to Product">SP_SCI_TO_PRO</_9:Code>
+                                    <_9:Value code="Private IP">Private IP</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Type of Feature">SP_TYPE_OF_FEATURE</_9:Code>
+                                    <_9:Value code="Base Feature">Base Feature</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Usage Threshold Alert">SP_USAGE_THRESH_ALERT</_9:Code>
+                                    <_9:Value code="No">No</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Routing Protocol">SP_ROUT_PROTOCAL</_9:Code>
+                                    <_9:Value code="EBGP">EBGP</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Encapsulation">SP_ENCAP</_9:Code>
+                                    <_9:Value code="Ethernet">Ethernet</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="IP Version">SP_IP_ADD_PRO</_9:Code>
+                                    <_9:Value code="IPV4">IPV4</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Zero Suppression Indicator">SP_ZERO_SUP</_9:Code>
+                                    <_9:Value code="Suppress">Suppress</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="SCI - Partner Service">SP_PIP_SCI_PARTNER_SERVICE</_9:Code>
+                                    <_9:Value code="Virtual Communications Express">Webex
+                                                                                    Calling</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Type of Cloud">SP_PIP_TYPE_OF_CLOUD</_9:Code>
+                                    <_9:Value code="Virtual Private Cloud (VPC)">Virtual
+                                                                                 Private
+                                                                                 Cloud
+                                                                                 (VPC)</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Enhanced Services">SP_ENHANCED_SECURITY</_9:Code>
+                                    <_9:Value code="No">No</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Pricebook LineItemI d">ESP_PRICEBOOK_LINEITEM_ID</_9:Code>
+                                    <_9:Value>PBLI-1652940527462-FET_PIP_GW_SCI_CUST_CONN-283110503-2022-05-20</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Billing Flag">SP_BILL_FLAG</_9:Code>
+                                    <_9:Value code="Yes">Yes</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="CLIN CE Quantity">SP_EIS_CLIN_CE_QTY</_9:Code>
+                                    <_9:Value>1</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="CLIN Description">SP_EIS_CLIN_DESC</_9:Code>
+                                    <_9:Value>No CLIN Description</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="CLIN MRC Quantity">SP_EIS_CLIN_MRC_QTY</_9:Code>
+                                    <_9:Value>1</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="CLIN NRC Quantity">SP_EIS_CLIN_NRC_QTY</_9:Code>
+                                    <_9:Value>1</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="EIS UBI CE">SP_EIS_UBI_CE</_9:Code>
+                                    <_9:Value>283109691_283109689#283110503-NOCLIN</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="EIS UBI MRC">SP_EIS_UBI_MRC</_9:Code>
+                                    <_9:Value>283109691_283109689#283110503-NOCLIN</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="EIS UBI NRC">SP_EIS_UBI_NRC</_9:Code>
+                                    <_9:Value>283109691_283109689#283110503-NOCLIN</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="RAW Unit of Measure">SP_RAW_UOM</_9:Code>
+                                    <_9:Value code="MB">MB</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Port Quantity">SP_PORT_QTY</_9:Code>
+                                    <_9:Value>1</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="SCI - CSP Customer ID">SP_PIP_SCI_CSP_CUST_ID</_9:Code>
+                                    <_9:Value>2324</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="Data Plan">SP_DATA_PLAN</_9:Code>
+                                    <_9:Value code="Usage">Usage</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="SCI - Partner Location">SP_PIP_SCI_PARTNER_LOCATION</_9:Code>
+                                    <_9:Value code="VCE US-Central">Webex
+                                                                    Calling
+                                                                    US-Central</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="SCI - Partner Name">SP_PIP_SCI_PARTNER_NAME</_9:Code>
+                                    <_9:Value code="Broadsoft">Broadsoft</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="Port Type">SP_PORT_TYPE</_9:Code>
+                                    <_9:Value code="SCI - Customer Connection">SCI - Customer Connection</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="Included Quantity">SP_INCLUDED_QTY</_9:Code>
+                                    <_9:Value>0</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="Originating Juris ID">SP_EIS_ORIG_JURISID</_9:Code>
+                                    <_9:Value code="120033">Domestic: CONUS</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="SCI Aggregated Billing">SP_SCI_AGG_BILL</_9:Code>
+                                    <_9:Value code="No">No</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="CLIN CE">SP_EIS_CLIN_CE</_9:Code>
+                                    <_9:Value>NOCLIN</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="CLIN MRC">SP_EIS_CLIN_MRC</_9:Code>
+                                    <_9:Value>NOCLIN</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="CLIN NRC">SP_EIS_CLIN_NRC</_9:Code>
+                                    <_9:Value>NOCLIN</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="Originating NSC Code">SP_EIS_ORIG_NSC</_9:Code>
+                                    <_9:Value>SCRMCADC</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="Estimate Usage">SP_EST_US</_9:Code>
+                                    <_9:Value>0</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec rateDeterminant="true">
+                                    <_9:Code name="SCI - Usage">SP_PIP_SCI_USAGE</_9:Code>
+                                    <_9:Value>-1</_9:Value>
+                                </_9:Spec>
+                                <_9:CapabilityPricing>
+                                    <_9:PricingLineItem>
+                                        <_9:PBLineItemID schemeName="PricingLineItemID">PBLI-1652940527462-FET_PIP_GW_SCI_CUST_CONN-283110503-2022-05-20</_9:PBLineItemID>
+                                        <_9:Charge>
+                                            <_9:ID>29419021617</_9:ID>
+                                            <_9:PricingSource>V</_9:PricingSource>
+                                            <_9:ChargeType>REC</_9:ChargeType>
+                                            <_9:CurrencyCode>USD</_9:CurrencyCode>
+                                            <_9:ChargeFrequency>MO</_9:ChargeFrequency>
+                                            <_9:UnitOfMeasure>UNIT</_9:UnitOfMeasure>
+                                            <_9:RateStatus>List</_9:RateStatus>
+                                            <_9:RateExpiryDate>2022-08-11</_9:RateExpiryDate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021617</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>EXISTING_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021617</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>NET_ADDL_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021617</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>STND_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021617</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>UNIT_NET_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:Code name="Bill Time">ARR</_9:Code>
+                                            <_9:Code name="CLINID">NOCLIN</_9:Code>
+                                            <_9:Code name="CLINDESCRIPTION">No
+                                                                            CLIN
+                                                                            Description</_9:Code>
+                                        </_9:Charge>
+                                        <_9:Charge>
+                                            <_9:ID>29419021619</_9:ID>
+                                            <_9:PricingSource>V</_9:PricingSource>
+                                            <_9:ChargeType>NRE</_9:ChargeType>
+                                            <_9:CurrencyCode>USD</_9:CurrencyCode>
+                                            <_9:ChargeFrequency>ON</_9:ChargeFrequency>
+                                            <_9:UnitOfMeasure>FLT</_9:UnitOfMeasure>
+                                            <_9:RateStatus>List</_9:RateStatus>
+                                            <_9:RateExpiryDate>2022-08-11</_9:RateExpiryDate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021619</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>EXISTING_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021619</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>NET_ADDL_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021619</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>STND_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021619</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>UNIT_NET_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:Code name="Bill Time">ARR</_9:Code>
+                                            <_9:Code name="CLINID">NOCLIN</_9:Code>
+                                            <_9:Code name="CLINDESCRIPTION">No
+                                                                            CLIN
+                                                                            Description</_9:Code>
+                                        </_9:Charge>
+                                        <_9:Charge>
+                                            <_9:ID>29419021621</_9:ID>
+                                            <_9:PricingSource>V</_9:PricingSource>
+                                            <_9:ChargeType>CE</_9:ChargeType>
+                                            <_9:CurrencyCode>USD</_9:CurrencyCode>
+                                            <_9:ChargeFrequency>MO</_9:ChargeFrequency>
+                                            <_9:UnitOfMeasure>UNIT</_9:UnitOfMeasure>
+                                            <_9:RateStatus>List</_9:RateStatus>
+                                            <_9:RateExpiryDate>2022-08-11</_9:RateExpiryDate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021621</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>EXISTING_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021621</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>NET_ADDL_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021621</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>STND_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:ChargeRate>
+                                                <_9:ID>29419021621</_9:ID>
+                                                <_9:PriceOrCost>N</_9:PriceOrCost>
+                                                <_9:RateType>UNIT_NET_RATE</_9:RateType>
+                                                <_9:Rate>0</_9:Rate>
+                                            </_9:ChargeRate>
+                                            <_9:Code name="Bill Time">ARR</_9:Code>
+                                            <_9:Code name="CLINID">NOCLIN</_9:Code>
+                                            <_9:Code name="CLINDESCRIPTION">No
+                                                                            CLIN
+                                                                            Description</_9:Code>
+                                        </_9:Charge>
+                                    </_9:PricingLineItem>
+                                </_9:CapabilityPricing>
+                                <_9:MileStone>
+                                    <_9_1:ID>CatalogReferenceTime</_9_1:ID>
+                                    <_9_1:Status>
+                                        <_9_1:EffectiveDateTime>2022-05-12T09:10:55Z</_9_1:EffectiveDateTime>
+                                    </_9_1:Status>
+                                </_9:MileStone>
+                            </_9:ServiceCapability>
+                            <_9:ServiceCapability>
+                                <_9_1:ID schemeName="InstanceID">283110415</_9_1:ID>
+                                <_9_1:Code name="FeatureCode">FET_SCI_VPN</_9_1:Code>
+                                <_9_1:Name>SCI VPN</_9_1:Name>
+                                <_9:ActionCode>ADD</_9:ActionCode>
+                                <_9:Spec>
+                                    <_9:Code name="Type of Feature">SP_TYPE_OF_FEATURE</_9:Code>
+                                    <_9:Value code="Base Feature">Base Feature</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Zero Suppression Indicator">SP_ZERO_SUP</_9:Code>
+                                    <_9:Value code="Suppress">Suppress</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="Billing Flag">SP_BILL_FLAG</_9:Code>
+                                    <_9:Value code="No">No</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="VPN Name">SP_VPN_NAME</_9:Code>
+                                    <_9:Value>VPN_SHAKE_TEST</_9:Value>
+                                </_9:Spec>
+                                <_9:Spec>
+                                    <_9:Code name="SCI - Customer Connection  Feature ID">SP_SCI_CCFI</_9:Code>
+                                    <_9:Value>283110503</_9:Value>
+                                </_9:Spec>
+                                <_9:MileStone>
+                                    <_9_1:ID>CatalogReferenceTime</_9_1:ID>
+                                    <_9_1:Status>
+                                        <_9_1:EffectiveDateTime>2022-05-12T09:44:02Z</_9_1:EffectiveDateTime>
+                                    </_9_1:Status>
+                                </_9:MileStone>
+                            </_9:ServiceCapability>
+                            <_9:Code name="ProductRecordCode">PR_PIP_GAT</_9:Code>
+                            <_9:Spec>
+                                <_9:Code name="Agency Service Request Number">SP_CUST_SPEC_1</_9:Code>
+                                <_9:Value>IPR_INSTALL_Latest</_9:Value>
+                            </_9:Spec>
+                            <_9:Spec>
+                                <_9:Code name="Agency Service Request Date">SP_CUST_SPEC_2</_9:Code>
+                                <_9:Value>05/13/2022</_9:Value>
+                            </_9:Spec>
+                            <_9:Spec>
+                                <_9:Code name="Customer Acceptance Normal Interval">SP_CUST_ACCEPT_NORMAL_INT</_9:Code>
+                                <_9:Value>0</_9:Value>
+                            </_9:Spec>
+                            <_9:Spec>
+                                <_9:Code name="Customer Acceptance Additional Interval">SP_CUST_ACCEPT_ADDITNL_INT</_9:Code>
+                                <_9:Value>0</_9:Value>
+                            </_9:Spec>
+                            <_9:Spec>
+                                <_9:Code name="Product Pricing Type">ESP_PRICING_TYPE</_9:Code>
+                                <_9:Value>RTB</_9:Value>
+                            </_9:Spec>
+                            <_9:Indicator type="ReferenceService">false</_9:Indicator>
+                            <_9:SellingRegion>US</_9:SellingRegion>
+                            <_9:ProviderParty category="VLE">
+                                <_9_1:PartyIDs>
+                                    <_9_1:ID schemeName="OpCo">1151</_9_1:ID>
+                                </_9_1:PartyIDs>
+                                <_9_1:Name>MCI Communications Services LLC d/b/a
+                                           Verizon Business Services</_9_1:Name>
+                            </_9:ProviderParty>
+                        </_9:DataService>
+                    </_9:Services>
+                    <_9:MileStone>
+                        <_9_1:ID>CatalogReferenceTime</_9_1:ID>
+                        <_9_1:Status>
+                            <_9_1:EffectiveDateTime>2022-05-12T09:10:55Z</_9_1:EffectiveDateTime>
+                        </_9_1:Status>
+                    </_9:MileStone>
+                </_9:Product>
+            </_9:ServiceOrderLine>
+            <_9:Location type="Service">
+                <_9_1:ID schemeName="InstanceID">21523167C</_9_1:ID>
+                <_9_1:Name>SACRAMENTO</_9_1:Name>
+                <_9_1:Code name="EndCustomerName">E2E-USA-13911-C4</_9_1:Code>
+                <_9_1:Code name="QuoteLocationName">SACRAMENTO</_9_1:Code>
+                <_9:ActionCode>ADD</_9:ActionCode>
+                <_9:Address>
+                    <_9_1:ID schemeName="AddressID">98552196</_9_1:ID>
+                    <_9_1:AddressLine sequence="1">1515 K ST</_9_1:AddressLine>
+                    <_9_1:CityName>SACRAMENTO</_9_1:CityName>
+                    <_9_1:CountrySubDivisionCode>CA</_9_1:CountrySubDivisionCode>
+                    <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                    <_9_1:PostalCode>95814-4051</_9_1:PostalCode>
+                </_9:Address>
+                <_9:LocationContact type="Primary">
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                        <_9_1:Address>
+                            <_9_1:ID schemeName="AddressID">f1c5a91f2ad04b7d95c2a957fa1da91c</_9_1:ID>
+                            <_9_1:AddressLine sequence="1">1515 K ST</_9_1:AddressLine>
+                            <_9_1:CityName>SACRAMENTO</_9_1:CityName>
+                            <_9_1:CountrySubDivisionCode>CA</_9_1:CountrySubDivisionCode>
+                            <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                            <_9_1:PostalCode>95814-4051</_9_1:PostalCode>
+                        </_9_1:Address>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                        <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                        <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                        <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                        <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                    </_9_1:Communication>
+                    <_9_1:FirstName>purnima</_9_1:FirstName>
+                    <_9_1:LastName>paruthi</_9_1:LastName>
+                </_9:LocationContact>
+                <_9:LocationContact type="Technical">
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                        <_9_1:Address>
+                            <_9_1:ID schemeName="AddressID">f1c5a91f2ad04b7d95c2a957fa1da91c</_9_1:ID>
+                            <_9_1:AddressLine sequence="1">1515 K ST</_9_1:AddressLine>
+                            <_9_1:CityName>SACRAMENTO</_9_1:CityName>
+                            <_9_1:CountrySubDivisionCode>CA</_9_1:CountrySubDivisionCode>
+                            <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                            <_9_1:PostalCode>95814-4051</_9_1:PostalCode>
+                        </_9_1:Address>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                        <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                        <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                        <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                        <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                    </_9_1:Communication>
+                    <_9_1:FirstName>purnima</_9_1:FirstName>
+                    <_9_1:LastName>paruthi</_9_1:LastName>
+                </_9:LocationContact>
+                <_9:LocationContact type="Survey">
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                        <_9_1:Address>
+                            <_9_1:ID schemeName="AddressID">f1c5a91f2ad04b7d95c2a957fa1da91c</_9_1:ID>
+                            <_9_1:AddressLine sequence="1">1515 K ST</_9_1:AddressLine>
+                            <_9_1:CityName>SACRAMENTO</_9_1:CityName>
+                            <_9_1:CountrySubDivisionCode>CA</_9_1:CountrySubDivisionCode>
+                            <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                            <_9_1:PostalCode>95814-4051</_9_1:PostalCode>
+                        </_9_1:Address>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                        <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                        <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                        <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                        <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                    </_9_1:Communication>
+                    <_9_1:FirstName>purnima</_9_1:FirstName>
+                    <_9_1:LastName>paruthi</_9_1:LastName>
+                </_9:LocationContact>
+                <_9:LocationContact type="Alternate">
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                        <_9_1:Address>
+                            <_9_1:ID schemeName="AddressID">f1c5a91f2ad04b7d95c2a957fa1da91c</_9_1:ID>
+                            <_9_1:AddressLine sequence="1">1515 K ST</_9_1:AddressLine>
+                            <_9_1:CityName>SACRAMENTO</_9_1:CityName>
+                            <_9_1:CountrySubDivisionCode>CA</_9_1:CountrySubDivisionCode>
+                            <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                            <_9_1:PostalCode>95814-4051</_9_1:PostalCode>
+                        </_9_1:Address>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                        <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                        <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                        <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                    </_9_1:Communication>
+                    <_9_1:Communication>
+                        <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                        <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                    </_9_1:Communication>
+                    <_9_1:FirstName>purnima</_9_1:FirstName>
+                    <_9_1:LastName>paruthi</_9_1:LastName>
+                </_9:LocationContact>
+                <_9:Site type="CUST">
+                    <_9_1:Name>SACRAMENTO</_9_1:Name>
+                    <_9:ActionCode>ADD</_9:ActionCode>
+                    <_9:Address>
+                        <_9_1:ID schemeName="OfficeSpaceID">2486017</_9_1:ID>
+                        <_9:Supplement>
+                            <_9:Building type="AOA">
+                                <_9:Name>AOA</_9:Name>
+                                <_9:Number>1</_9:Number>
+                            </_9:Building>
+                            <_9:Floor type="APT">
+                                <_9:Name>APARTMENT</_9:Name>
+                                <_9:Number>2</_9:Number>
+                            </_9:Floor>
+                            <_9:Room type="BSMT">
+                                <_9:Name>BASEMENT</_9:Name>
+                                <_9:Number>3</_9:Number>
+                            </_9:Room>
+                            <_9:Designator listID="AOA" name="AOA">1</_9:Designator>
+                            <_9:Designator listID="APT" name="APARTMENT">2</_9:Designator>
+                            <_9:Designator listID="BSMT" name="BASEMENT">3</_9:Designator>
+                        </_9:Supplement>
+                    </_9:Address>
+                    <_9:Contact type="Primary">
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Address</_9_1:ChannelCode>
+                            <_9_1:Address>
+                                <_9_1:ID schemeName="AddressID">f1c5a91f2ad04b7d95c2a957fa1da91c</_9_1:ID>
+                                <_9_1:AddressLine sequence="1">1515 K ST</_9_1:AddressLine>
+                                <_9_1:CityName>SACRAMENTO</_9_1:CityName>
+                                <_9_1:CountrySubDivisionCode>CA</_9_1:CountrySubDivisionCode>
+                                <_9_1:CountryCode listID="USA"
+                                                  name="United States">US</_9_1:CountryCode>
+                                <_9_1:PostalCode>95814-4051</_9_1:PostalCode>
+                            </_9_1:Address>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Phone</_9_1:ChannelCode>
+                            <_9_1:CountryDialing>1</_9_1:CountryDialing>
+                            <_9_1:AreaDialing>866</_9_1:AreaDialing>
+                            <_9_1:DialNumber>8997654</_9_1:DialNumber>
+                        </_9_1:Communication>
+                        <_9_1:Communication>
+                            <_9_1:ChannelCode>Email</_9_1:ChannelCode>
+                            <_9_1:URI>purnima.paruthi@verizon.com</_9_1:URI>
+                        </_9_1:Communication>
+                        <_9_1:FirstName>purnima</_9_1:FirstName>
+                        <_9_1:LastName>paruthi</_9_1:LastName>
+                    </_9:Contact>
+                </_9:Site>
+                <_9:Indicator type="PrimaryLocation">true</_9:Indicator>
+            </_9:Location>
+            <_9:Location type="CLE">
+                <_9_1:ID schemeName="InstanceID">78731201729</_9_1:ID>
+                <_9:ActionCode>ADD</_9:ActionCode>
+                <_9:Address>
+                    <_9_1:ID schemeName="AddressID">aadbea6ed7a646b3a11c49df7e93cae2</_9_1:ID>
+                    <_9_1:AddressLine sequence="1">2424 Garden of the Gods Rd</_9_1:AddressLine>
+                    <_9_1:CityName>Colorado Springs</_9_1:CityName>
+                    <_9_1:CountrySubDivisionCode>CO</_9_1:CountrySubDivisionCode>
+                    <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                    <_9_1:PostalCode>80919-3133</_9_1:PostalCode>
+                </_9:Address>
+                <_9:Indicator type="PrimaryLocation">true</_9:Indicator>
+                <_9:PhoneNumber>1234567890</_9:PhoneNumber>
+            </_9:Location>
+            <_9:Location type="CLE">
+                <_9_1:ID schemeName="InstanceID">78731201735</_9_1:ID>
+                <_9:ActionCode>ADD</_9:ActionCode>
+                <_9:Address>
+                    <_9_1:ID schemeName="AddressID">e5672f3668bf4833958e5d149de1527f</_9_1:ID>
+                    <_9_1:AddressLine sequence="1">2424 GARDEN OF THE GODS RD</_9_1:AddressLine>
+                    <_9_1:CityName>COLORADO SPRINGS</_9_1:CityName>
+                    <_9_1:CountrySubDivisionCode>CO</_9_1:CountrySubDivisionCode>
+                    <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                    <_9_1:PostalCode>80919</_9_1:PostalCode>
+                </_9:Address>
+                <_9:PhoneNumber>1234567890</_9:PhoneNumber>
+            </_9:Location>
+            <_9:Location type="Billing">
+                <_9_1:ID schemeName="InstanceID">101519451916</_9_1:ID>
+                <_9:ActionCode>ADD</_9:ActionCode>
+                <_9:Address>
+                    <_9_1:ID schemeName="AddressID">e5672f3668bf4833958e5d149de1527f</_9_1:ID>
+                    <_9_1:AddressLine sequence="1">2424 GARDEN OF THE GODS RD</_9_1:AddressLine>
+                    <_9_1:CityName>COLORADO SPRINGS</_9_1:CityName>
+                    <_9_1:CountrySubDivisionCode>CO</_9_1:CountrySubDivisionCode>
+                    <_9_1:CountryCode listID="USA" name="United States">US</_9_1:CountryCode>
+                    <_9_1:PostalCode>80919</_9_1:PostalCode>
+                </_9:Address>
+                <_9:Indicator type="PrimaryLocation">true</_9:Indicator>
+            </_9:Location>
+        </_9:ServiceOrder>
+    </_9:DataArea>
+</_9:ProcessServiceOrder>
+      </ser:ProcessServiceOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
