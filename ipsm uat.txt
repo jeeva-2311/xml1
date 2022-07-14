@@ -1,0 +1,67 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://www.mci.com/ServiceOrder">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:ProcessServiceOrderRequest/>
+         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+         <wsse:UsernameToken/>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <order:AcknowledgeServiceOrderRequest xmlns:order="http://www.mci.com/ServiceOrder" xmlns:_9_1="http://www.openapplications.org/oagis/9" xmlns:_9="http://www.mci.com/oagis/9">
+         <_9:AcknowledgeServiceOrder releaseID="11.3.1">
+            <_9_1:ApplicationArea>
+               <_9_1:Sender>
+                  <_9_1:LogicalID>IPSM</_9_1:LogicalID>
+                  <_9_1:ComponentID>IPSM</_9_1:ComponentID>
+                  <_9_1:TaskID>IPSMOrderAccepted</_9_1:TaskID>
+                  <_9_1:ConfirmationCode>ALWAYS</_9_1:ConfirmationCode>
+                  <_9_1:AuthorizationID/>
+               </_9_1:Sender>
+               <_9_1:CreationDateTime>2022-07-06</_9_1:CreationDateTime>
+               <_9_1:BODID/>
+               <_9_1:UserArea/>
+            </_9_1:ApplicationArea>
+            <_9:DataArea>
+               <_9_1:Acknowledge/>
+               <_9:ServiceOrder>
+                  <_9:ServiceOrderHeader>
+                     <_9_1:DocumentID>
+                        <_9_1:ID schemeName="WorkOrderNumber">99250563</_9_1:ID>
+                        <_9_1:RevisionID>0</_9_1:RevisionID>
+                     </_9_1:DocumentID>
+                     <_9:MileStone>
+                        <_9_1:ID>IPSMOrderAccepted</_9_1:ID>
+                        <_9_1:Status>
+                           <_9_1:EffectiveDateTime>2022-07-06</_9_1:EffectiveDateTime>
+                        </_9_1:Status>
+                     </_9:MileStone>
+                  </_9:ServiceOrderHeader>
+                  <_9:ServiceOrderLine>
+                     <_9:Product>
+                        <_9:Services>
+                           <_9:DataService type="PR_PIP_GAT">
+                              <_9_1:ID schemeName="InstanceID">108641379</_9_1:ID>
+                              <_9:CategoryCode>PR_PIP_GAT</_9:CategoryCode>
+                              <_9:ProductOfferingID>283109689</_9:ProductOfferingID>
+                              <_9_1:Name>Private IP Gateways</_9_1:Name>
+                              <_9:ActionCode>INSTALL</_9:ActionCode>
+                              <_9:NodeID>0</_9:NodeID>
+                              <_9:ProvisioningStatus>
+                                 <_9_1:Code>PROVISIONED</_9_1:Code>
+                                 <_9:ProvisioningError/>
+                              </_9:ProvisioningStatus>
+                           </_9:DataService>
+                        </_9:Services>
+                     </_9:Product>
+                  </_9:ServiceOrderLine>
+               </_9:ServiceOrder>
+            </_9:DataArea>
+         </_9:AcknowledgeServiceOrder>
+      </order:AcknowledgeServiceOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+      </ser:ProcessServiceOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
