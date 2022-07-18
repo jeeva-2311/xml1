@@ -1,0 +1,68 @@
+package orderXml;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.xpath.XPathExpressionException;
+import org.xml.sax.SAXException;
+
+import com.common.ReadConfigNew;
+import com.ipm.IPMcomm;
+
+
+public class OrderPush {
+	public OrderPush(){
+		
+	}
+	public static void main() throws XPathExpressionException, SAXException, IOException, ParserConfigurationException, TransformerException, InterruptedException {
+		// TODO Auto-generated method stub
+		BODXmlPushService wsObj=null;
+		ReplaceXmlValue obj = new ReplaceXmlValue();
+		obj.generateValues();
+		/* String AccessFile = IPMcomm.importParam("AccessFile");
+		 String TransportFile = IPMcomm.importParam("TransportFile");
+		 String CPEFile = IPMcomm.importParam("CPEFile");*/
+//		String Env=ReadConfigNew.getUrl();
+		String Env="PCAD";
+		//String baseFile = "US_TSO_ENT_IDS.xml";
+		System.out.println(Env+" is the Environment to push the BOD");
+		HashMap<String, String> resAccessMapObj = obj.updateInstallXml(IPMcomm.importParam("AccessFile"));
+		HashMap<String, String> resTransportMapObj = obj.updateInstallXml(IPMcomm.importParam("TransportFile"));
+		HashMap<String, String> resCPEMapObj = obj.updateInstallXml(IPMcomm.importParam("CPEFile"));
+		obj.hashMapIterator(resAccessMapObj);
+		obj.hashMapIterator(resTransportMapObj);
+		obj.hashMapIterator(resCPEMapObj);
+		
+	/*	baseFile = "TC007_Transport.xml";
+		
+		HashMap<String, String> resTransportMapObj = obj.updateInstallXml(baseFile);
+		obj.hashMapIterator(resTransportMapObj); */
+		if(Env.equalsIgnoreCase("PCAD")){
+			System.out.println("Pushing the orders to environment: " + Env);
+			wsObj = new BODXmlPushService("https://pccoread.ebiz.verizon.com/OSB-PRISM-Services/EOMProcessServiceOrderPS?wsdl");
+			System.out.println(Env+"Url is : https://pccoread.ebiz.verizon.com/OSB-PRISM-Services/EOMProcessServiceOrderPS?wsdl");}
+		else if (Env.equalsIgnoreCase("PCAE")){
+			System.out.println("Pushing the orders to environment: " + Env);
+			wsObj = new BODXmlPushService("https://pccoreae.ebiz.verizon.com/OSB-PRISM-Services/EOMProcessServiceOrderPS?wsdl");
+			System.out.println(Env+"url is :https://pccoreae.ebiz.verizon.com/OSB-PRISM-Services/EOMProcessServiceOrderPS?wsdl");
+		} else
+			System.out.println("Environment is null. Exiting...");
+		/*wsObj.execute(resAccessMapObj.get("outputFilePath"));
+		wsObj.execute(resTransportMapObj.get("outputFilePath"));
+		wsObj.execute(resCPEMapObj.get("outputFilePath"));*/
+		
+		wsObj.execute(System.getProperty("user.dir")+"//CommonXMLs/INTLType4_Install_LBW_NID_CPE_Health_Check_Access_New.xml");
+		wsObj.execute(System.getProperty("user.dir")+"//CommonXMLs/INTLType4_Install_LBW_NID_CPE_Health_Check_Transport_New.xml");
+		wsObj.execute(System.getProperty("user.dir")+"//CommonXMLs/INTLType4_Install_LBW_NID_CPE_Health_Check_CPE_New.xml");
+		Thread.sleep(120000);
+//		Thread.sleep(2000);
+		
+		
+	}
+
+
+
+	
+}

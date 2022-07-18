@@ -1,0 +1,45 @@
+package orderXml;
+
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
+import org.testng.annotations.BeforeClass;
+
+import org.testng.annotations.Test;
+
+import com.ExtentReportUtility.BaseSetup;
+import com.ExtentReportUtility.ExtentReport;
+import com.common.Config;
+import com.ipm.IPMcomm;
+
+public class OrderPushTest extends BaseSetup {
+	
+	OrderPush testObj = null;
+	IPMcomm IPMcommObj = null;
+	Config config= new Config();
+	
+	@BeforeClass
+	public void setUp() throws Exception {		
+		ExtentReport extentReportObj = new ExtentReport();
+		IPMcommObj   = new IPMcomm(extentReportObj, System.getProperty("user.dir")+"//config.properties");
+		testObj = new OrderPush();
+	}
+	@Test
+	public void testGUI() throws Exception {
+		ExtentReport.setExtentTest(extent,"Param1",1,"OrdePush");
+		OrderPush.main();
+		ExtentReport.extent.endTest(ExtentReport.test);
+		
+		try {
+			PrintStream ps = new PrintStream("C:\\Users\\sivajsu\\downloads\\demo.txt");
+			System.setOut(ps);
+			ps.print(test);
+			
+		} catch (FileNotFoundException ft) {
+			System.out.println(ft);
+		}
+	}
+
+
+}
+

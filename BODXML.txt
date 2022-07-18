@@ -1,0 +1,115 @@
+package orderXml;
+
+import java.io.File;
+import java.io.StringReader;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.FileRequestEntity;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.RequestEntity;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+
+public class BODXmlPushService {
+
+	static int empf = 0, naf = 0, rettype = 0, retprod = 0;
+
+	// Get file to be posted
+
+	static String PcOrderwsurl = null;
+
+	// Prepare HTTP post
+	PostMethod post = null;
+	// Request content will be retrieved directly
+	// from the input stream
+	String serviceinfo = null;
+
+	public BODXmlPushService(String endPoint) {
+		PcOrderwsurl = endPoint;
+	}
+
+	public int execute(String xmlFile) {
+
+		try {
+			//		String xmlRecords = XmlStringTest.getContent();
+			String xmlRecords = null;
+			
+			int returnCode = 1;
+			File input = new File(xmlFile);
+
+			post = new PostMethod(PcOrderwsurl);
+			RequestEntity entity = new FileRequestEntity(input, "text/xml; charset=UTF-8");
+			post.setRequestEntity(entity);
+			post.setRequestHeader("SOAPAction", "http://www.mci.com/ServiceOrder/ProcessServiceOrder");
+			// Get HTTP client
+			HttpClient httpclient = new HttpClient();
+			// Execute request
+			int result = httpclient.executeMethod(post);
+			System.out.println("Response status code: " + result);
+
+			if (result == 200) {
+				System.out.println("Sucess response ProcessServiceOrder Ws");
+			} else {
+				System.out.println("Failure response ProcessServiceOrder Ws");
+				return returnCode;
+			}
+
+			System.out.println("ProcessServiceOrder response is "+ post.getResponseBodyAsString()); 
+			xmlRecords = post.getResponseBodyAsString(); 
+
+			/*DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			dbf.setNamespaceAware(true);
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			InputSource is = new InputSource();
+			is.setCharacterStream(new StringReader(xmlRecords));
+			dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+
+            dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+
+            dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+			Document doc = db.parse(is);*/
+			
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+			dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+			dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+			dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+			dbf.setXIncludeAware(false);
+			dbf.setExpandEntityReferences(false);
+			dbf.setNamespaceAware(true);
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			InputSource is = new InputSource();
+			is.setCharacterStream(new StringReader(xmlRecords));
+			//dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);            
+			Document doc = db.parse(is);
+
+			doc.getDocumentElement().normalize();
+			System.out.println("Root element :"+ doc.getDocumentElement().getNodeName());
+
+			NodeList ele = doc.getElementsByTagNameNS("*", "Description");
+			Node nList1 = ele.item(0);
+
+			if (nList1.getTextContent().equals("success")) {
+				System.out.println("BOD XML Push status: " + nList1.getTextContent());
+				Thread.sleep(30000);
+			} else {
+				System.out.println("BOD XML Push status: " + nList1.getTextContent());
+				return 1;
+			}
+			
+		} catch (Exception e) {
+			System.out.println();
+			e.printStackTrace();
+			return 1;
+			
+		}
+		return 0;
+		
+	}
+}
+

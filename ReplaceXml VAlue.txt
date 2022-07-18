@@ -1,0 +1,174 @@
+package orderXml;
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+import com.ipm.IPMcomm;
+
+public class ReplaceXmlValue {
+
+	String timeStamp;
+	String dateStamp;
+
+	NodeList nodes;
+	
+	public ReplaceXmlValue() {
+		generateValues();
+	}
+
+	public HashMap<String,String> updateInstallXml(String inputFile) throws SAXException, IOException, ParserConfigurationException, XPathExpressionException, TransformerException{
+
+		String[] parts = inputFile.split(".xml");
+		String outputFile = parts[0]+"_New.xml";
+		//String pathPrefix="../CommonXMLs/";
+		//inputPath=pathPrefix.concat(inputPath);
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+		dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+		dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+		dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+		dbf.setXIncludeAware(false);
+        dbf.setExpandEntityReferences(false);
+		
+		Document doc = dbf.newDocumentBuilder().parse(new InputSource(inputFile));
+		//Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new InputSource(inputFile));
+		
+		XPath xpath = XPathFactory.newInstance().newXPath();
+		
+		HashMap<String, String> mapObj = new HashMap<String, String>();
+		
+		nodes = (NodeList)xpath.evaluate("//*[@schemeName='InstanceID']", doc, XPathConstants.NODESET);
+
+		for (int idx = 0; idx < nodes.getLength(); idx++) {
+			String value = nodes.item(idx).getTextContent();
+			if(!value.equals("0")){
+				value = "9" + timeStamp + value.substring(timeStamp.length()+1);
+				//System.out.println("Change # 1 - "+idx+" "+value);
+				nodes.item(idx).setTextContent(value);
+				
+			}
+		}
+	
+		nodes = (NodeList)xpath.evaluate("//*[@schemeName='WorkOrderNumber']", doc, XPathConstants.NODESET);
+
+		for (int idx = 0; idx < nodes.getLength(); idx++) {
+			String value = nodes.item(idx).getTextContent();
+			String schemeID = nodes.item(idx).getAttributes().getNamedItem("schemeID").getNodeValue();
+			value = "9" + timeStamp + value.substring(timeStamp.length()+1);
+			//System.out.println("Change # 2 - "+schemeID+" "+value);
+			mapObj.put(schemeID, value);
+			nodes.item(idx).setTextContent(value);
+		}
+
+		nodes = (NodeList)xpath.evaluate("//*[@schemeName='RelatedWorkOrderNumber']", doc, XPathConstants.NODESET);
+
+		for (int idx = 0; idx < nodes.getLength(); idx++) {
+			String value = nodes.item(idx).getTextContent();
+			String schemeID = nodes.item(idx).getAttributes().getNamedItem("schemeID").getNodeValue();
+			value = "9" + timeStamp + value.substring(timeStamp.length()+1);
+			//System.out.println("Change # 3 - "+schemeID+" "+value);
+			mapObj.put(schemeID, value);
+			nodes.item(idx).setTextContent(value);
+			
+		}
+
+		nodes = (NodeList)xpath.evaluate("//*[contains(@schemeName,'UNOServiceOrder')]", doc, XPathConstants.NODESET);
+
+	for (int idx = 0; idx < nodes.getLength(); idx++) {
+			String value = nodes.item(idx).getTextContent();
+			String schemeID = nodes.item(idx).getAttributes().getNamedItem("schemeName").getNodeValue();
+			value = "8" + timeStamp + value.substring(timeStamp.length()+1);
+			//System.out.println("Change # 5 - "+schemeID+" "+value);
+			
+			mapObj.put(schemeID, value);
+			nodes.item(idx).setTextContent(value);
+			IPMcomm.exportParam("ServiceOrder",value);
+		}
+
+		nodes = (NodeList)xpath.evaluate("//*[preceding::*[text()='CustDesiredDueDate']][local-name()='Date'][not(@*)]", doc, XPathConstants.NODESET);
+
+		for (int idx = 0; idx < nodes.getLength(); idx++) {
+			//String value = nodes.item(idx).getNodeName();
+			//System.out.println("Change # 4 - "+idx+" "+dateStamp);
+			nodes.item(idx).setTextContent(dateStamp);
+		}
+		
+		/*TransformerFactory transFact = TransformerFactory.newInstance();
+
+		transFact.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+		transFact.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, "");		
+
+		Transformer xformer = transFact.newTransformer();
+		xformer.transform(new DOMSource(doc), new StreamResult(new File(outputFile)));
+		TransformerFactory transFact = TransformerFactory.newInstance();
+		Transformer xformer = transFact.newTransformer();
+		
+		//trfactory.setFeature("http://xml.org/sax/features/external-general-entities", false); 
+		//trfactory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);		
+		
+		*
+		*/
+		
+		TransformerFactory trfactory = TransformerFactory.newInstance();
+		trfactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+		Transformer xformer = trfactory.newTransformer();
+		xformer.transform(new DOMSource(doc), new StreamResult(new File(outputFile)));
+		
+		mapObj.put("outputFilePath", outputFile);
+
+		return mapObj;
+	}
+
+	public void generateValues(){
+		timeStamp = new SimpleDateFormat("sSSS").format(Calendar.getInstance().getTime()); // For Instance ID and Order Numbers
+		
+
+		Date date = Calendar.getInstance().getTime();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		cal.add(Calendar.DATE, 30); 
+		dateStamp = new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()); // For CustDesiredDueDate
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public void hashMapIterator(HashMap <String, String> hashmap){
+		 // Getting a Set of Key-value pairs
+	    Set<?> entrySet = hashmap.entrySet();
+	 
+	    // Obtaining an iterator for the entry set
+	    Iterator<?> it = entrySet.iterator();
+	 
+	    // Iterate through HashMap entries(Key-Value pairs)
+	    while(it.hasNext()){
+	       Map.Entry me = (Map.Entry)it.next();
+	       System.out.println(me.getKey() + " number: "+me.getValue());
+	   }
+	}
+}
